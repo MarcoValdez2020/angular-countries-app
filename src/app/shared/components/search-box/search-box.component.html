@@ -1,0 +1,12 @@
+<input type="text"
+[placeholder]="placeholder"
+class="form-control"
+
+(keyup.enter)="emitValue(txtInput.value)"
+#txtInput>
+
+<!-- con keyup. buttonname indicamos a que
+  reaccionara el evento, y
+  por medio de # identificamos
+  nuestro evento y accedemos a sus
+  propiedades -->

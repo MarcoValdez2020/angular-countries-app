@@ -1,0 +1,20 @@
+<h2>Por capital</h2>
+<hr>
+
+<div class="row ">
+  <div class="col">
+    <!-- SearchBox -->
+    <!-- con () llamamos nuestros eventos tambien, en este caso se definio onValue en nuestro shared-search box
+      donde pasamos de parametro algun método de nuestro by-capital-component que deseemos -->
+    <shared-search-box (onValue)="searchByCapital($event)" placeholder="Buscar por capital"></shared-search-box>
+    <hr>
+
+  </div>
+</div>
+
+
+<div class="row ">
+  <div class="col">
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>
