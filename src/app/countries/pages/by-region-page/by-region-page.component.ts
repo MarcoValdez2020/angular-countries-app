@@ -15,7 +15,6 @@ export class ByRegionPageComponent implements OnInit{
 
   public countries: Country[] = [];
   public isLoading:boolean = false;
-  public initialValue:Region='';
 
   public regions:Region[]=['Africa','Americas','Asia','Europe','Oceania']
   public selectedRegion?: Region;
@@ -25,7 +24,7 @@ export class ByRegionPageComponent implements OnInit{
 
 
   ngOnInit(): void {
-    this.initialValue= this.countriesService.cacheStore.byRegion.region;
+    this.selectedRegion= this.countriesService.cacheStore.byRegion.region;
     this.countries = this.countriesService.cacheStore.byRegion.countries;
   }
 

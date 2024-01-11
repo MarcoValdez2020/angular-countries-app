@@ -5,10 +5,10 @@
     <button *ngFor="let region of regions"
       class="btn mx-2 mt-1"
       [ngClass]="{
-        'btn-outline-dark': selectedRegion === region || region === initialValue
+        'btn-outline-dark': selectedRegion === region
       }"
       (click)="searchByRegion(region)"
-      [value]="initialValue">
+      [value]="selectedRegion">
       {{region}}
     </button>
     <hr>
