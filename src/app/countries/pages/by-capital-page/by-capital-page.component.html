@@ -6,7 +6,8 @@
     <!-- SearchBox -->
     <!-- con () llamamos nuestros eventos tambien, en este caso se definio onValue en nuestro shared-search box
       donde pasamos de parametro algun método de nuestro by-capital-component que deseemos -->
-    <shared-search-box (onValue)="searchByCapital($event)" placeholder="Buscar por capital"></shared-search-box>
+    <shared-search-box (onValue)="searchByCapital($event)" (onDebaunce)="searchByCapital($event)" placeholder="Buscar por capital"
+      [value]="intitialValue"></shared-search-box>
     <hr>
 
   </div>
@@ -15,6 +16,7 @@
 
 <div class="row ">
   <div class="col">
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
     <countries-table [countries]="countries"></countries-table>
   </div>
 </div>
